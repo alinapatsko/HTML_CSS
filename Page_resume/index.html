@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title> Создать резюме </title>
+    <link rel="stylesheet" href="style.css"> <!--объединение с файлом-CSS-->
+</head>
+
+<body>
+    <div id='center_text'> <!--задать любые параметры в любое место на странице-->
+        <form enctype='multipart/form-data' method='post' action='#'> <!--при использовании поля для отправки файла-->
+
+            <p id='rezyme'> Создать резюме </p> <!--абзац-->
+            <p class='mymenu'>Основная информация</p>
+            <div class='paragraph'>
+                <p class='mytext'>Загрузите вашу фотографию</p>
+                <input type='file' name='photo' multiple accept='image/*,image/jpeg'> <!--загрузка фото на сервер-->
+                <br> <!--пустая строка, enter-->
+                <br>
+                <input type='text' name='surname' placeholder='Фамилия'> <!--Поля для ввода текста-->
+                <input type='text' name='firstname' placeholder='Имя'>
+                <input type='text' name='middle_name' placeholder='Отчество'>
+                <br>
+                <br>
+                <input type='text' name='position' placeholder='Должность'>
+                <br>
+                <br>
+                <input type='text' name='zarplata' placeholder='Желаемая зарплата'>
+                <select name='currency'>  <!--Выпадающие списки-->
+                    <option value='BYR'>рублей</option> <!--отдельный пункт списка-->
+                    <option value='USD'>долларов</option>
+                    <option value='EUR'>евро</option>
+                </select>
+                <br>
+                <br>
+                <span class='mytext'>Занятость</span>  <!--строчный текст с любыми параметрами-->
+                <select name='busy'> <!--Выпадающие списки-->
+                    <option value='1'>Полная</option>
+                    <option value='2'>Частичная</option>
+                    <option value='3'>Проектная</option>
+                    <option value='4'>Стажировка</option>
+                    <option value='5'>Волонтерство</option>
+                </select>
+                <br>
+                <br>
+                <span class='mytext'>График работы</span>
+                <select name='grafik'> <!--Выпадающие списки-->
+                    <option value='1'>Полный день</option>
+                    <option value='2'>Сменный график</option>
+                    <option value='3'>Гибкий график</option>
+                    <option value='4'>Удаленная работа</option>
+                    <option value='5'>Вахтовый метод</option>
+                </select>
+                <br>
+                <br>
+                <div class='mytext'>
+                    <input type='checkbox' name='komandir'> Готовность к командировкам</div> <!--Чекбокс-->
+                <br>
+                <div class='mytext'>Телефон для связи
+                    <input type='text' name='tel' placeholder='+375 (29) 000-00-00'> <!--исчезающий текст в строке-->
+                </div>
+                <br>
+                <div>
+                    <input type='checkbox' name='priloj'>Viber <!--Чекбокс-->
+                    <input type='checkbox' name='priloj'>Telegram
+                    <input type='checkbox' name='priloj'>Whatsapp
+                    <br>
+                    <br>
+                    <div class='mytext'>Электронная почта 
+                        <input type='text' name='email' placeholder='ivan.ivanov@gmail.com'> <!--исчезающий текст в строке-->
+                    </div>
+                </div>
+            </div>
+
+            <p class='mymenu'>Личная информация</p>
+            <div class='paragraph'>
+                <div class='mytext'>Город проживания 
+                    <input type='text' name='city' placeholder='г. Минск'> <!--исчезающий текст в строке-->
+                </div>
+                <br>
+                <div class='mytext'>Гражданство
+                    <input type='text' name='nation' placeholder='Беларусь'> <!--исчезающий текст в строке-->
+                </div>
+                <br>
+                <!--Календарь-->
+                <div class='mytext'>Дата рождения
+                    <input type='date' name='calendar'> <!--календарь-->
+                </div>
+                <br>
+                <div class='mytext'>Пол <!--Переключатели-->
+                    <input type='radio' name='pol' value='мужской'>М
+                    <input type='radio' name='pol' value='женский'>Ж
+                </div>
+                <br>
+                <div class='mytext'>Семейное положение
+                    <select name='marital_status'> <!--Выпадающие списки-->
+                        <option value='1'>Женат/ Замужем</option>
+                        <option value='2'>Холост/ Не замужем</option>
+                    </select>
+                    <input type='checkbox' name='children'>Есть дети </div> <!--Чекбокс-->
+            </div>
+
+            <p class='mymenu'>Образование</p>
+            <div class='paragraph'>
+                <p class='mytext'>Расскажите где вы получали образование - это увеличит ваши шансы на трудоустройство.</p>
+                <div class='mytext'>Образование
+                    <select name='education'>
+                        <!--Выпадающие списки-->
+                        <option value='1'>Среднее</option>
+                        <option value='2'>Среднее неполное</option>
+                        <option value='3'>Среднее специальное</option>
+                        <option value='4'>Высшее</option>
+                        <option value='5'>Высшее неполное</option>
+                    </select>
+                </div>
+                <br>
+                <div class='mytext'>Учебное заведение
+                    <input type='text' name='institution' placeholder='БГУ'>
+                </div>
+                <br>
+                <div class='mytext'>Факультет
+                    <input type='text' name='faculty' placeholder='Экономический'>
+                </div>
+                <br>
+                <div class='mytext'>Специальность
+                    <input type='text' name='specialty' placeholder='Экономика предприятия'>
+                </div>
+                <br>
+                <div class='mytext'>Форма обучения
+                    <select name='form'>
+                        <option value='1'>Очная</option>
+                        <option value='2'>Заочная</option>
+                    </select>
+                </div>
+                <br>
+                <div class='mytext'>Год окончания
+                    <input type='text' name='year' placeholder='2019'>
+                </div>
+            </div>
+
+            <p class='mymenu'>Опыт работы</p>
+            <div class='paragraph'>
+                <p class='mytext'>Укажите ваши предыдущие места работы - большинство работодателей предпочитают опытных сотрудников.</p>
+                <input type='text' name='organixation' placeholder='Организация'>  <!--Поля для ввода текста-->
+                <input type='text' name='position' placeholder='Должность'>
+                <p class='mytext'>Период работы</p>
+                <span>с</span>  <!--Календарь-->
+                <input type='date' name='calendar'>
+                <span>по</span>
+                <input type='date' name='calendar'>
+                <p class='mytext'>Должностные обязанности и достижения</p>
+                <textarea name='duties'> </textarea> <!--Поле ввода данных-->
+            </div>
+
+            <p class='mymenu'>Дополнительная информация</p>
+            <div class='paragraph'>
+                <input type='text' name='language' placeholder='Какие иностранные языки вы знаете?'>
+                <p class='mytext'>Водительские права</p>
+                <div>
+                    <input type='checkbox' name='driving'>A <!--Чекбокс-->
+                    <input type='checkbox' name='driving'>В
+                    <input type='checkbox' name='driving'>С</div>
+                <br>
+                <div class='mytext'>
+                    <input type='checkbox' name='medical'>Наличие медицинской справки </div> <!--Чекбокс-->
+                <p class='mytext'>Дополнительная информация: профессиональные навыки и знания, знание программ (MS Office, графические редакторы, языки программирования и т.д.), хобби и увлечения.
+                </p>
+                <textarea name='information'> </textarea>
+            </div>
+            <div>
+                <br>
+                <div class='mytext'>
+                    <!--Чекбокс-->
+                    <input type='checkbox' name='consent'> согласен на получение вакансий от работодателей на e-mail, смс, мессенджеры, звонки на телефон. </div>
+                <br>
+                <!--Кнопка отправки-->
+                <input type='submit' value='Отправить данные' onclick="alert('Ваше резюме отправлено. Хорошего дня! :)')">
+                <!--Очистка всей формы-->
+                <input type='reset' value='Сбросить всё'>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
